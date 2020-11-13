@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "Monetix"
+  "defaultProject": "Monetix",
+  "cli": {
+    "analytics": "5637470a-5170-49f0-bd65-f04ed19c9ecb"
+  }
 }
