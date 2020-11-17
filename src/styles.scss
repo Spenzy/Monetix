@@ -8,6 +8,13 @@
 
 $primary: rgb(0,180,216);
 
+body {
+  margin: 0;
+  font-family: 'Nunito', 'sans-serif';
+  font-size: 18px;
+  background-color: azure;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -19,8 +26,8 @@ header {
   }
   a.logo {
     font-weight: bold;
+    padding-left: 2em;
   }
-
   nav {
     float: right;
     ul {
@@ -38,20 +45,14 @@ header {
   }
 }
 
-body {
-  margin: 0;
-  font-family: 'Nunito', 'sans-serif';
-  font-size: 18px;
-  background-color: azure;
-}
-
 p {
   font-size: 2em;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  width: 50%;
+  margin: 2em auto;
+  background-color: white;
 }
 
 h1 {
