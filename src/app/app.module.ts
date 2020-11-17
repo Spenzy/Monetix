@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { ConsultingComponent } from './consulting/consulting.component';
 import { TrainingComponent } from './training/training.component';
 import { AssistanceComponent } from './assistance/assistance.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AssistanceComponent } from './assistance/assistance.component';
     LoginComponent,
     ConsultingComponent,
     TrainingComponent,
-    AssistanceComponent
+    AssistanceComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
