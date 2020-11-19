@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/*importing Roboto Font*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 /* Color Palette*/
 /*[ {"name":"Navy Blue","hex":"03045e","rgb":[3,4,94]},
     {"name":"Star Command Blue","hex":"0077b6","rgb":[0,119,182]},
@@ -10,8 +12,8 @@ $primary: rgb(0,180,216);
 
 body {
   margin: 0;
-  font-family: 'Nunito', 'sans-serif';
-  font-size: 18px;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 1.2em;
   background-color: azure;
 }
 
@@ -36,7 +38,6 @@ header {
       display: flex;
       li a {
         padding: 1em;
-
         &:hover {
           background: darken($primary, 10%);
         }
@@ -49,10 +50,25 @@ p {
   font-size: 2em;
 }
 
-.container {
-  width: 50%;
+.body-container {
+  width: 80%;
   margin: 2em auto;
   background-color: white;
+  padding: 1.5em;
+  p {
+    float: left;
+    font-size: 1.2em;
+  }
+  &.block{
+    padding: 3em;
+    border: 1px solid lightgray;
+    margin-bottom: 1em;
+
+    input {
+      padding: 1em;
+      margin-bottom: 2em;
+    }
+  }
 }
 
 h1 {
