@@ -1,1 +1,77 @@
-<p>services works!</p>
+<div class="service-wrapper">
+  <!--Monetix Introduction section-->
+  <div class="container-fluid padding">
+    <div class="row intro padding">
+      <div class="col-12">
+        <h1 class="display-4">Our Services</h1>
+        <hr>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+  </div>
+  <!--Monetix service navigation section-->
+  <div class="button-row">
+    <button class="btn btn-sm btn-outline-primary mr-2" (click)="svcAcc.toggle('assistance-pane')">Assistance</button>
+    <button class="btn btn-sm btn-outline-primary mr-2" (click)="svcAcc.toggle('training-panel')">Training</button>
+    <button class="btn btn-sm btn-outline-primary mr-2" (click)="svcAcc.toggle('consulting-panel')">Consulting</button>
+  </div>
+  <ngb-accordion #svcAcc="ngbAccordion" animation="true" [closeOthers]="true">
+    <ngb-panel id="assistance-pane">
+      <ng-template ngbPanelHeader>
+        <h5>Assistance</h5>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <ul>
+          <li>Assistance in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Assistance in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Assistance in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel id="training-panel">
+      <ng-template ngbPanelHeader>
+        <h5>Training</h5>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <ul>
+          <li>Training in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Training in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Training in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel id="consulting-panel">
+      <ng-template ngbPanelHeader>
+        <h5>Consulting</h5>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+          Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <ul>
+          <li>Consulting in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Consulting in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Consulting in XYZ : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+
+   <button mat-raised-button color="primary" class="apply-btn">Apply Now!</button>
+
+</div>
