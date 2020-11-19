@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+/*importing Roboto Font*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+/* Color Palette*/
+/*[ {"name":"Navy Blue","hex":"03045e","rgb":[3,4,94]},
+    {"name":"Star Command Blue","hex":"0077b6","rgb":[0,119,182]},
+    {"name":"Cerulean Crayola","hex":"00b4d8","rgb":[0,180,216]},
+    {"name":"Sky Blue Crayola","hex":"90e0ef","rgb":[144,224,239]},
+    {"name":"Powder Blue","hex":"caf0f8","rgb":[202,240,248]}]*/
+
+$primary: rgb(0,180,216);
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 1.2em;
+  background-color: azure;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: $primary;
+  padding: 1em 0;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  a.logo {
+    font-weight: bold;
+    padding-left: 2em;
+  }
+  nav {
+    float: right;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      display: flex;
+      li a {
+        padding: 1em;
+        &:hover {
+          background: darken($primary, 10%);
+        }
+      }
+    }
+  }
+}
+
+p {
+  font-size: 2em;
+}
+
+.body-container {
+  width: 80%;
+  margin: 2em auto;
+  background-color: white;
+  padding: 1.5em;
+  p {
+    float: left;
+    font-size: 1.2em;
+  }
+  &.block{
+    padding: 3em;
+    border: 1px solid lightgray;
+    margin-bottom: 1em;
+
+    input {
+      padding: 1em;
+      margin-bottom: 2em;
+    }
+  }
+}
+
+h1 {
+  margin-top: 2em;
+}
