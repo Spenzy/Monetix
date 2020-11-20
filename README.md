@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # Monetix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
-=======
-# Monetix
->>>>>>> b8ee2ba6f38e4ba60a9188acf9f98f6940e9ead1
+This project is made with angular 11. It's a work in progress and the final product might not be what is currently shown.
+As soon as this project is finished and/or ready to be used i will link the hosted domain to this site.
