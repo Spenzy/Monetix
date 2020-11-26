@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { Component} from '@angular/core';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {NgForm} from '@angular/forms';
+
 
 @Component({
   selector: 'app-form-modal',
@@ -7,11 +9,8 @@ import {NgbActiveModal, NgbModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./form-modal.component.scss']
 })
 
-export class FormModalComponent implements OnInit {
+export class FormModalComponent{
 
-  constructor(public activeModal: NgbActiveModal) { }
-
-  ngOnInit(): void {
-  }
+  constructor(public formModal: NgbModal) { }
 
 }

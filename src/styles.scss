@@ -161,5 +161,12 @@ footer {
   }
 }
 
+.form-group {
+  hr {
+    width: 90%;
+    border-top: 0.2rem gray;
+  }
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

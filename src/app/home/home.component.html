@@ -64,7 +64,7 @@
       </div>
     </div>
   </div>
-  <!--Monetix service navigation section-->
+  <!--Monetix service information section-->
   <div class="button-row">
     <button class="btn btn-sm btn-outline-primary mr-2" (click)="svcAcc.toggle('assistance-pane')">Assistance</button>
     <button class="btn btn-sm btn-outline-primary mr-2" (click)="svcAcc.toggle('training-panel')">Training</button>
@@ -127,6 +127,66 @@
     </ngb-panel>
   </ngb-accordion>
 
-  <button mat-raised-button color="primary" class="apply-btn">Apply Now!</button>
+  <!--Monetix Application Modal section-->
+  <ng-template #apply let-modal>
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-basic-title">Application</h3>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col">
+              <label for="uName">Name:</label>
+              <input class="form-control" id="uName" type="text" placeholder="Ex: John" required>
+            </div>
+            <div class="col">
+              <label for="uLname">Last Name:</label>
+              <input class="form-control" id="uLname" type="text" placeholder="Ex: Doe" required>
+            </div>
+          </div>
+          <hr>
+          <label for="uEmail">Adresse Mail:</label>
+          <input class="form-control" id="uEmail" type="email" placeholder="Ex: John.Doe@monetix.com" required>
+          <hr>
+          <div class="form-row">
+            <div class="col">
+            <label for="uEnterprise">Enterprise:</label>
+            <input class="form-control" id="uEnterprise" type="text" placeholder="Ex: Monetix" required>
+            </div>
+            <div class="col">
+            <label for="uMobile">Phone Number:</label>
+            <input class="form-control" id="uMobile" type="text" placeholder="Ex: (+216) xx 123 456" required>
+            </div>
+          </div>
+          <hr>
+          <div class="form-row">
+            <label>Services: </label>
+            <div class="btn-group btn-group-toggle button-row">
+              <label class="btn-primary" ngbButtonLabel>
+                <input type="checkbox" ngbButton [(ngModel)]="model.assistance"> Assistance
+              </label>
+              <label class="btn-primary" ngbButtonLabel>
+                <input type="checkbox" ngbButton [(ngModel)]="model.training"> Training
+              </label>
+              <label class="btn-primary" ngbButtonLabel>
+                <input type="checkbox" ngbButton [(ngModel)]="model.consulting"> Consulting
+              </label>
+            </div>
+          </div>
+          <hr>
+          <pre>{{model | json}}</pre>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="modal.close()">Envoyer</button>
+    </div>
+  </ng-template>
+
+  <button class="btn btn-primary apply-btn" (click)="open(apply)">Apply Now!</button>
 
 </div>
