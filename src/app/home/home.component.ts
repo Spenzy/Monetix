@@ -9,7 +9,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 export class HomeComponent implements OnInit{
-  model = {
+  mxService = {
     assistance: false,
     training: false,
     consulting: false
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit{
   constructor(private modalService: NgbModal) {}
 
   open(content: any): void {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
+    this.modalService.open(content, {ariaLabelledBy: 'Application Form'});
   }
 
   ngOnInit(): void {

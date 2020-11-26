@@ -165,20 +165,19 @@
           <hr>
           <div class="form-row">
             <label>Services: </label>
-            <div class="btn-group btn-group-toggle button-row">
-              <label class="btn-primary" ngbButtonLabel>
-                <input type="checkbox" ngbButton [(ngModel)]="model.assistance"> Assistance
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input type="checkbox" [(ngModel)]="mxService.assistance" (click)="mxService.assistance=!mxService.assistance"> Assistance
               </label>
-              <label class="btn-primary" ngbButtonLabel>
-                <input type="checkbox" ngbButton [(ngModel)]="model.training"> Training
+              <label class="form-check-label">
+                <input type="checkbox" [(ngModel)]="mxService.training"> Training
               </label>
-              <label class="btn-primary" ngbButtonLabel>
-                <input type="checkbox" ngbButton [(ngModel)]="model.consulting"> Consulting
+              <label class="form-check-label">
+                <input type="checkbox" [(ngModel)]="mxService.consulting"> Consulting
               </label>
             </div>
           </div>
           <hr>
-          <pre>{{model | json}}</pre>
         </div>
       </form>
     </div>
