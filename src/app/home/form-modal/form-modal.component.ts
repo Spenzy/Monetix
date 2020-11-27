@@ -41,7 +41,7 @@ export class FormModalComponent implements OnInit{
   }
   onSubmit(): boolean {
     if (!this.form.valid) {
-      alert('Please fill all the required fields to create a super hero!');
+      alert('Please fill all the required fields!');
       return false;
     }
     console.log(this.form.value);

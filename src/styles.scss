@@ -169,7 +169,14 @@ footer {
   label {
     font-weight: bold;
   }
+
+  .btn-apply{
+    display: flex;
+    justify-content: right;
+  }
 }
+
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

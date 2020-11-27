@@ -2,25 +2,25 @@
   <div class="form-group">
     <div class="form-row">
       <div class="col">
-        <label for="uName">Name:</label>
+        <label for="uName">Name*:</label>
         <input class="form-control" id="uName" type="text" formControlName="fName" placeholder="Ex: John" required>
       </div>
       <div class="col">
-        <label for="uLname">Last Name: </label>
+        <label for="uLname">Last Name*: </label>
         <input class="form-control" id="uLname" type="text" formControlName="lName" placeholder="Ex: Doe" required>
       </div>
     </div>
     <hr>
-    <label for="uEmail">Adresse Mail: </label>
+    <label for="uEmail">Adresse Mail*: </label>
     <input class="form-control" id="uEmail" type="email" formControlName="email" placeholder="Ex: John.Doe@monetix.com" required>
     <hr>
     <div class="form-row">
       <div class="col">
-        <label for="uEnterprise">Company: </label>
+        <label for="uEnterprise">Company*: </label>
         <input class="form-control" id="uEnterprise" type="text" formControlName="company" placeholder="Ex: Monetix" required>
       </div>
       <div class="col">
-        <label for="uMobile">Phone Number: </label>
+        <label for="uMobile">Phone Number*: </label>
         <input class="form-control" id="uMobile" type="text" formControlName="uPhone" placeholder="Ex: (+216) xx 123 456" required>
       </div>
     </div>
@@ -45,4 +45,8 @@
     <label for="uMsg">Send us a message: </label>
     <textarea class="form-control" id="uMsg" formControlName="uMsg" placeholder="Vous voulez mentienner quelque chose? N'hésitez pas!"></textarea>
   </div>
+  <div class="container-fluid">
+    <button type="submit" class="btn btn-success btn-apply">Send</button>
+  </div>
+
 </form>

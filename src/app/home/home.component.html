@@ -139,10 +139,10 @@
       <app-form-modal></app-form-modal>
     </div>
     <div class="modal-footer">
-      <button type="submit" class="btn btn-success">Envoyer</button>
+      <button type="button" class="btn btn-danger" (close)="modal.close()">close</button>
     </div>
   </ng-template>
+    <button class="btn btn-primary apply-btn" (click)="open(apply)">Apply Now!</button>
 
-  <button class="btn btn-primary apply-btn" (click)="open(apply)">Apply Now!</button>
 
 </div>
