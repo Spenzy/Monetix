@@ -8,14 +8,11 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class HomeComponent implements OnInit{
-  mxService = {
-    assistance: false,
-    training: false,
-    consulting: false
-  };
 
   constructor(private modalService: NgbModal) {}
+  scroll(): void {
 
+  }
   open(content: any): void {
     this.modalService.open(content, {ariaLabelledBy: 'Application Form'});
   }

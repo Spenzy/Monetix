@@ -12,7 +12,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormModalComponent } from './home/form-modal/form-modal.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -21,6 +22,7 @@ import {FormsModule} from '@angular/forms';
   declarations: [
     AppComponent,
     HomeComponent,
+    LoginComponent,
     FormModalComponent,
   ],
   imports: [
@@ -29,9 +31,10 @@ import {FormsModule} from '@angular/forms';
     NgbModule,
     BrowserAnimationsModule,
     FormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     AngularFireModule.initializeApp(environment),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
