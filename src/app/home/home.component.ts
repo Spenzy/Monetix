@@ -7,7 +7,6 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./home.component.scss']
 })
 
-
 export class HomeComponent implements OnInit{
   mxService = {
     assistance: false,
