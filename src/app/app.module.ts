@@ -30,7 +30,7 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment),
     AngularFirestoreModule
   ],
   providers: [],

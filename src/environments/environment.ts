@@ -2,7 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-// @ts-ignore
+
 export const environment = {
   production: false,
   firebaseConfig: {
@@ -15,9 +15,6 @@ export const environment = {
     appId: '1:799326388483:web:3e9d158b3bd6e2b064a936',
     measurementId: 'G-8ZZYKX3NEY'
   },
-  // Initialize Firebase
-  firebase.initializeApp(this.firebaseConfig),
-  firebase.analytics(),
 };
 
 /*
