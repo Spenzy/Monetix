@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormModalComponent } from './home/form-modal/form-modal.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -24,6 +25,7 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     LoginComponent,
     FormModalComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
