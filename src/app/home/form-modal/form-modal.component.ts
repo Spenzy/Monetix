@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {FormBuilder, Validators} from '@angular/forms';
+import {FirebaseService} from '../../_service/firebase.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class FormModalComponent implements OnInit{
     consulting: false
   };
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fbs: FirebaseService, private fb: FormBuilder) {
   }
 
   form = this.fb.group({
@@ -30,12 +31,14 @@ export class FormModalComponent implements OnInit{
   ngOnInit(): void {
 
   }
+
   onSubmit(): boolean {
     if (!this.form.valid) {
       alert('Please fill all the required fields!');
       return false;
     }
     console.log(this.form.value);
+    this.fbs.createUser(this.form.value);
     return true;
   }
 

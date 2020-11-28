@@ -33,7 +33,7 @@ import { AdminComponent } from './admin/admin.component';
     BrowserAnimationsModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
-    AngularFireModule.initializeApp(environment),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     ReactiveFormsModule
   ],
