@@ -15,15 +15,6 @@ export class FormModalComponent implements OnInit{
     consulting: false
   };
 
-  user = {
-    fName: String,
-    lName: String,
-    email: String,
-    company: String,
-    uPhone: String,
-    uMsg: String
-  };
-
   constructor(private fb: FormBuilder) {
   }
 
