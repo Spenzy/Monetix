@@ -7,15 +7,19 @@ import {FirebaseService} from '../_service/firebase.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-  applicationList: any;
+  private applicationList: any;
   values: any;
+  profile: any;
 
   constructor(private fbs: FirebaseService) {
     this.applicationList = this.fbs.readUser();
+    this.applicationList.subscribe((value: any) => this.values = value);
   }
 
-  test(): void{
-    this.applicationList.subscribe((value: any) => this.values = value);
+  updateProfile(i: number): void{
+    console.log(i);
+    this.profile = this.values[i];
+    console.log(this.profile);
   }
 
   ngOnInit(): void {
