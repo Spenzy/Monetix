@@ -17,24 +17,24 @@ export class UserApplication{
 export class FirebaseService {
 
   constructor(private firestore: AngularFirestore) { }
-
   // Create
   createUser(user: UserApplication): void{
-    this.firestore.collection('userApplications').add(user).then(err => '');
-  }
-  // Read
-  readUser(): any {
-    return this.firestore.collection('userApplications').snapshotChanges();
+    this.firestore.collection('userApplications').add(user).then(err => console.log(err));
   }
 
-  // Update
+  // Read
+  readUser(): any {
+    return this.firestore.collection('userApplications').valueChanges();
+  }
+
+  // Update, ps: Unverified
   updatePolicy(user: UserApplication): void{
-    this.firestore.doc('userApplications/' + user.email).update(user).then(err => '');
+    this.firestore.doc('userApplications/' + user.email).update(user).then(err => console.log(err));
   }
 
   // Delete, ps: Unverified
   deletePolicy(user: UserApplication): void{
-    this.firestore.doc('userApplications/' + user).delete().then(err => '');
+    this.firestore.doc('userApplications/' + user.email).delete().then(err => console.log(err));
   }
 
 }

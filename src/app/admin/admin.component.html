@@ -1,1 +1,75 @@
-<p>admin works!</p>
+<button type="button" (click)="test()"> TESTING </button>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Company</th>
+    <th scope="col">Email</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let value of values; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      <ngb-highlight [result]="value.fName +' '+ value.lName"></ngb-highlight>
+    </td>
+    <td><ngb-highlight [result]="value.company"></ngb-highlight></td>
+    <td><ngb-highlight [result]="value.email"></ngb-highlight></td>
+  </tr>
+  </tbody>
+</table>
+
+{{values | json }}
+<!--
+<div class="col-md-8">
+  <div class="card mb-3">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-3">
+          <h6 class="mb-0">Full Name</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+          {{user.fName}} {{user.lName}}
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-3">
+          <h6 class="mb-0">Email</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+          {{user.email}}
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-3">
+          <h6 class="mb-0">Phone</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+          (239) 816-9029
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-3">
+          <h6 class="mb-0">Mobile</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+          (320) 380-4539
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-3">
+          <h6 class="mb-0">Address</h6>
+        </div>
+        <div class="col-sm-9 text-secondary">
+          Bay Area, San Francisco, CA
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->

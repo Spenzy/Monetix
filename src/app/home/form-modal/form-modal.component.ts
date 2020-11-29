@@ -25,7 +25,8 @@ export class FormModalComponent implements OnInit{
     email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
     company: ['', [Validators.required]],
     uPhone: ['', [Validators.required, Validators.maxLength(13), Validators.pattern('^[0-9]+$')]],
-    uMsg: ['', [Validators.required]]
+    uMsg: ['', [Validators.required]],
+    archived: false
   });
 
   ngOnInit(): void {
