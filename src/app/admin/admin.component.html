@@ -1,80 +1,83 @@
 <!-- -->
-{{values[0] | json}}
-<div>
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Company</th>
-      <th scope="col">Email</th>
-      <th scope="col">Options</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let value of values; index as i">
-      <th scope="row">{{ i + 1 }}</th>
-      <td>
-        <ngb-highlight [result]="value.fName +' '+ value.lName"></ngb-highlight>
-      </td>
-      <td><ngb-highlight [result]="value.company"></ngb-highlight></td>
-      <td><ngb-highlight [result]="value.email"></ngb-highlight></td>
-      <td>
-        <button class="btn btn-success" (click)="updateProfile(i)">View</button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-</div>
-<div *ngIf="profile">
-  <div class="col-md-8">
-    <div class="card mb-3">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-sm-3">
-            <h6 class="mb-0">Full Name: </h6>
-          </div>
-          <div class="col-sm-9 text-secondary">
-            {{profile.fName}} {{profile.lName}}
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-sm-3">
-            <h6 class="mb-0">Email: </h6>
-          </div>
-          <div class="col-sm-9 text-secondary">
-            {{profile.email}}
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-sm-3">
-            <h6 class="mb-0">Phone: </h6>
-          </div>
-          <div class="col-sm-9 text-secondary">
-            {{profile.uPhone}}
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-sm-3">
-            <h6 class="mb-0">Company: </h6>
-          </div>
-          <div class="col-sm-9 text-secondary">
-            {{profile.company}}
-          </div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-sm-3">
-            <h6 class="mb-0">Message: </h6>
-          </div>
-          <div class="col-sm-9 text-secondary">
-            {{profile.uMsg}}
+<div class="container-fluid">
+  <div class="row">
+    <div *ngIf="profile" class="col-lg">
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Full Name: </h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{profile.fName}} {{profile.lName}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Email: </h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{profile.email}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h3 class="mb-0">Phone: </h3>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{profile.uPhone}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Company: </h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{profile.company}}
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Message: </h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                {{profile.uMsg}}
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="col-lg">
+      <table class="table table-hover table-responsive-sm">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Company</th>
+          <th scope="col">Email</th>
+          <th scope="col">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let value of values; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            <ngb-highlight [result]="value.fName +' '+ value.lName"></ngb-highlight>
+          </td>
+          <td><ngb-highlight [result]="value.company"></ngb-highlight></td>
+          <td><ngb-highlight [result]="value.email"></ngb-highlight></td>
+          <td>
+            <button class="btn btn-success" (click)="updateProfile(i)">View</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
