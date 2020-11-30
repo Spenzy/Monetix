@@ -12,8 +12,7 @@ export class AdminComponent implements OnInit {
   profile: any;
 
   constructor(private fbs: FirebaseService) {
-    this.applicationList = this.fbs.readUser();
-    this.applicationList.subscribe((value: any) => this.values = value);
+
   }
 
   updateProfile(i: number): void{
@@ -23,6 +22,8 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.applicationList = this.fbs.readUser();
+    this.applicationList.subscribe((value: any) => this.values = value);
   }
 
 }
